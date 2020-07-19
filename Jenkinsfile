@@ -6,6 +6,7 @@ node {
     }
     stage('Test') {
             echo "Entered Test Stage"
+            sh 'python Simple.py'
     }
     stage('Deliver') {
             echo "Entered Deliver Stage"
