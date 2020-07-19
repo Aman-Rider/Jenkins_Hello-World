@@ -3,7 +3,7 @@ node {
             echo "Entered Build Stage"
             checkout scm
             sh 'python Simple.py'
-        }
+        
     }
     stage('Test') {
             echo "Entered Test Stage"
