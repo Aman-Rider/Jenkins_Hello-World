@@ -4,7 +4,7 @@ node {
             checkout scm
             sh 'python Simple.py'
             withSonarQubeEnv {
-            sh "./gradlew clean sonarqube"
+            sh "Simple.py clean sonarqube"
         }
     }
     stage('Test') {
