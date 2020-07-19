@@ -3,6 +3,9 @@ node {
             echo "Entered Build Stage"
             checkout scm
             sh 'python Simple.py'
+            withSonarQubeEnv {
+            sh "./gradlew clean sonarqube"
+        }
     }
     stage('Test') {
             echo "Entered Test Stage"
