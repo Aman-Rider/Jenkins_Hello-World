@@ -1,2 +1,4 @@
 print("Hello World!! -- Welcome to Jenkins")
-print("If i am printed that means Poll SCM running ")
+print("I have removed Poll SCM")
+print("If i am printed that means wWebhooks running fine")
+
