@@ -3,8 +3,6 @@ node {
             echo "Entered Build Stage"
             checkout scm
             sh 'python Simple.py'
-            SonarQube {
-            sh "./Simple.py clean sonarqube"
         }
     }
     stage('Test') {
