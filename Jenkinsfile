@@ -3,7 +3,9 @@ node {
             echo "Entered Build Stage"
             checkout scm
             sh 'python Simple.py'
-            sh './gradlew clean sonarqube'
+            def scannerHome = tool 'SonarQube3'
+            withSonarQubeEnv('SonarQube') {
+                sh "${scannerHome}/bin/sonar-scanner"
         
     }
     stage('Test') {
