@@ -1,7 +1,10 @@
 node {
+    agent { docker { image 'python:3.7.2' } }
     stage('Build') {
             echo "Entered Build Stage"
             checkout scm
+            sh 'pip install flask'
+            sj 'pip freeze'
             sh 'python Simple.py'
             def sonar.projectKey=Jenkins
             def sonar.projectName=Jenkins
