@@ -10,7 +10,11 @@ pipeline {
       steps {
           
         sh 'pip freeze'
-      }   
+      }
+      post {
+        always {
+          junit 'test-reports/*.xml'
+        }
     }
   }
 }
